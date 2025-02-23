@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>DR TEKST TV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+    <script src="static/imageMapResizer.min.js"></script>
+</head>
+<body>
+
+
+    <div id="main">
+        <h1>DR TEKST TV</h1>
+        <div id="img_container">
+            <img src="{{ img_src }}" id="content">
+
+            {{map|safe}}
+        </div>
+        <div id="controls">
+            <div class="box">
+                <form method="post" action="/tilbage">
+                    <input type="submit" value="Tilbage">
+                </form>
+            </div> <!-- SKAL VÆRE ET BILLEDE -->
+            <div class="box">
+                <form method="post" action="/select">
+                    <input name="number" type="number" style="width: 30%; margin-left: 1em; margin-right: 1em;">
+                    <input type="submit" value="Gå">
+                </form>
+            </div>
+            <div class="box">
+                <form method="post" action="/frem">
+                    <input type="submit" value="Frem">
+                </form>
+            </div>
+            <div class="box">
+                <form method="post" action="/returner">
+                    <input type="submit" value="step back">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            imageMapResize();
+    </script>
+</body>

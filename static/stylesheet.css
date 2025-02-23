@@ -1,0 +1,38 @@
+html {
+    height:100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+}
+
+#main {
+    height: 100%;
+    width: 40%;
+}
+
+#img_container {
+    width: 100%;
+    max-height: 80%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    background-color: red;
+    color: white;
+    text-align:center;
+}
+
+img {
+    display:block;
+    margin: auto;
+}
+
